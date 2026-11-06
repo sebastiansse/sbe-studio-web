@@ -1,0 +1,524 @@
+:root {
+    --lime: #c4ff00;
+    --black: #050505;
+    --muted: #bcbcbc
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    background: #fff;
+    color: var(--black);
+    font-family: Arial, Helvetica, sans-serif
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+img {
+    display: block;
+    max-width: 100%
+}
+
+.site-header {
+    height: 64px;
+    margin: 0 1.1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #aaa;
+    gap: 24px
+}
+
+.brand {
+    font-size: 20px;
+    white-space: nowrap;
+    letter-spacing: .01em
+}
+
+.main-nav {
+    display: flex;
+    gap: 28px
+}
+
+.main-nav a,
+.languages {
+    font-size: 10px;
+    font-weight: 800
+}
+
+.main-nav a:hover,
+.site-footer a:hover {
+    text-decoration: underline
+}
+
+.languages {
+    display: flex;
+    gap: 12px
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: 0;
+    font-size: 25px
+}
+
+.hero {
+    min-height: 440px;
+    display: grid;
+    grid-template-columns: 42% 58%;
+    align-items: end;
+    padding: 20px 1.1% 28px
+}
+
+.hero-left {
+    align-self: center;
+    margin-top: 110px
+}
+
+.hero-left p {
+    font-weight: 900;
+    font-size: clamp(13px, 1.55vw, 23px);
+    letter-spacing: .28em;
+    line-height: 1.4
+}
+
+.short-rule {
+    display: block;
+    width: 42px;
+    height: 4px;
+    background: #000;
+    margin-top: 12px
+}
+
+.hero-right {
+    position: relative;
+    align-self: center;
+    min-height: 300px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start
+}
+
+.hero-right h1 {
+     font-size: clamp(150px, 28vw, 470px);
+    letter-spacing: -.095em;
+    line-height: .85;
+    margin: 0 1vw 0 0;
+    font-weight: 900;
+    position: relative;
+    z-index: 1;
+    font-style: normal;
+    transform: none;
+}
+
+.lime-shape {
+    position: absolute;
+    background: var(--lime);
+    width: 95px;
+    height: 180px;
+    left: -8%;
+    top: 55%;
+    clip-path: polygon(0 0, 34% 0, 100% 45%, 100% 100%, 0 60%);
+    z-index: 2
+}
+
+.lime-shape span {
+    display: block;
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 0.95;
+    padding: 45px 0 0 13px
+}
+
+.projects {
+    padding: 0 1.1% 16px 21%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px
+}
+
+.project {
+    overflow: hidden
+}
+
+.project img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    transition: filter .25s
+}image-rendering: auto;
+
+.project:hover img {
+    filter: grayscale(1)
+}
+
+.project span {
+    display: block;
+    font-size: 9px;
+    letter-spacing: .12em;
+    font-weight: 800;
+    padding-top: 8px
+}
+
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr
+}
+
+.about {
+    margin-top: 10px
+}
+
+.about-copy {
+    padding: 13% 10% 9% 4%;
+    align-self: center
+}
+
+.about-copy h2,
+.services-copy h2 {
+    font-size: clamp(65px, 8vw, 145px);
+    letter-spacing: -.070em;
+    line-height: .5;
+    margin: 0 0 28px;
+    font-weight: 900
+}
+
+.about-copy p {
+    font-size: clamp(12px, 1.05vw, 16px);
+    line-height: 1.4;
+    max-width: 490px;
+    margin: 0 0 11px
+}
+
+.about-copy .small-caps {
+    letter-spacing: .15em;
+    font-size: 11px;
+    margin-top: 18px
+}
+
+.section-image {
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    object-fit: cover
+}
+
+.services-copy {
+    padding: 11% 7% 6%
+}
+
+.services-copy h2 {
+    font-size: clamp(56px, 7.5vw, 128px);
+    margin-bottom: 35px
+}
+
+.eyebrow {
+    font-weight: 900;
+    font-size: 11px;
+    margin-bottom: 20px
+}
+
+.service {
+    display: grid;
+    grid-template-columns: 38px 1fr;
+    gap: 10px;
+    margin: 0 0 24px
+}
+
+.service>b {
+    font-size: 13px
+}
+
+.service h3 {
+    font-size: clamp(13px, 1.3vw, 20px);
+    margin: 0 0 7px;
+    letter-spacing: -.045em
+}
+
+.service p {
+    font-size: 11px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    max-width: 420px;
+    margin: 0
+}
+
+.contact {
+    position: relative;
+    min-height: 640px;
+    overflow: hidden;
+    padding: 65px 4% 0
+}
+
+.contact-content {
+    position: relative;
+    z-index: 2;
+    max-width: 68%
+}
+
+.contact h2 {
+    font-size: clamp(45px, 6.8vw, 112px);
+    line-height: .95;
+    letter-spacing: -.065em;
+    margin: 0;
+    font-weight: 900
+}
+
+.contact-subtitle {
+    font-size: clamp(28px, 4.6vw, 76px);
+    color: var(--muted);
+    font-weight: 900;
+    letter-spacing: -.05em;
+    line-height: 1;
+    margin: 15px 0
+}
+
+.talk-button {
+    display: inline-block;
+    background: var(--lime);
+    padding: 17px 25px;
+    font-size: 14px;
+    font-weight: 900;
+    margin: 0 0 60px
+}
+
+.talk-button:hover {
+    background: #a8df00
+}
+
+.contact-details h3 {
+    font-size: 12px;
+    letter-spacing: .25em;
+    margin: 25px 0 8px
+}
+
+.contact-details p,
+.contact-details a {
+    font-size: 13px;
+    line-height: 1.5
+}
+
+.portrait {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 150%;
+    max-height: 600px;
+    object-fit: contain;
+    object-position: bottom right
+}
+
+.site-footer {
+    border-top: 1px solid #aaa;
+    min-height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 1.1%;
+    gap: 20px;
+    font-size: 13px;
+    letter-spacing: .05em
+}
+
+@media(max-width:850px) {
+    .hero {
+        grid-template-columns: 34% 66%;
+        min-height: 330px
+    }
+
+    .hero-right {
+        min-height: 210px
+    }
+
+    .hero-right h1 {
+        font-size: 29vw
+    }
+
+    .lime-shape {
+        width: 65px;
+        height: 95px
+    }
+
+    .lime-shape span {
+        font-size: 7px;
+        padding: 20px 0 0 9px
+    }
+
+    .projects {
+        padding-left: 1.1%
+    }
+
+    .section-image {
+        min-height: 460px
+    }
+
+    .about-copy {
+        padding: 9% 6%
+    }
+
+    .services-copy {
+        padding: 9% 6%
+    }
+
+    .service {
+        margin-bottom: 15px
+    }
+
+    .contact {
+        min-height: 550px
+    }
+}
+
+@media(max-width:600px) {
+    .site-header {
+        height: 58px
+    }
+
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 58px;
+        left: 0;
+        right: 0;
+        background: #fff;
+        z-index: 10;
+        padding: 20px;
+        flex-direction: column;
+        border-bottom: 1px solid #ddd
+    }
+
+    .main-nav.open {
+        display: flex
+    }
+
+    .menu-toggle {
+        display: block
+    }
+
+    .languages {
+        margin-left: auto
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        min-height: 0;
+        padding: 30px 3% 20px
+    }
+
+    .hero-left {
+        margin: 0
+    }
+
+    .hero-left p {
+        font-size: 12px
+    }
+
+    .hero-right {
+        min-height: 180px;
+        align-items: center
+    }
+
+    .hero-right h1 {
+        font-size: 43vw
+    }
+
+    .lime-shape {
+        left: 17%;
+        top: 50%
+    }
+
+    .projects {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 0 3% 25px;
+        gap: 12px
+    }
+
+    .split {
+        grid-template-columns: 1fr
+    }
+
+    .about-copy {
+        padding: 55px 5%
+    }
+
+    .about .section-image {
+        min-height: 0;
+        height: 360px
+    }
+
+    .services .section-image {
+        min-height: 0;
+        height: 360px
+    }
+
+    .services-copy {
+        padding: 55px 5%
+    }
+
+    .contact {
+        padding: 50px 5% 0;
+        min-height: 730px
+    }
+
+    .contact-content {
+        max-width: 100%
+    }
+
+    .contact h2 {
+        font-size: 12vw
+    }
+
+    .contact-subtitle {
+        font-size: 7vw
+    }
+
+    .talk-button {
+        margin-bottom: 30px
+    }
+
+    .portrait {
+        width: 100%;
+        max-height: 600px
+    }
+
+    .site-footer {
+        font-size: 10px;
+        flex-wrap: wrap
+    }
+}
+/* Separar Services y Contact */
+.services,
+.contact {
+    width: 100%;
+    clear: both;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.hero-left {
+    transform: translateY(60px);
+}
+.about-copy p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.8;
+    letter-spacing: 0;
+    text-transform: none;
+}
+.about-copy h2 {
+    text-transform: uppercase;
+}
